@@ -6,6 +6,7 @@
       "displayName": "Default Config",
       "description": "Building with statically linked dependencies",
       "binaryDir": "${sourceDir}/build-default",
+      "generator": "Visual Studio 17 2022",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "SLIC3R_STATIC": true,
@@ -23,6 +24,7 @@
       "description": "Building with statically linked dependencies without STEP file support",
       "inherits": "default",
       "binaryDir": "${sourceDir}/build-no-occt",
+      "generator": "Visual Studio 17 2022",
       "cacheVariables": {
         "SLIC3R_ENABLE_FORMAT_STEP": false,
         "PrusaSlicer_DEPS_PRESET": "no-occt"
@@ -33,6 +35,7 @@
       "displayName": "Shared dependencies",
       "description": "Building with dynamically linked dependencies from the system",
       "binaryDir": "${sourceDir}/shareddeps",
+      "generator": "Visual Studio 17 2022",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Release",
         "SLIC3R_STATIC": false,
@@ -43,8 +46,8 @@
       }
     },
     {
-      "name": "DefaultWithDeps",
-      "description": "Build with dependencies builds also",
+      "name": "Xargas Configure",
+      "description": "Configure to build with dependencies builds also",
       "displayName": "",
       "cacheVariables": {
         "PrusaSlicer_BUILD_DEPS": "y"
@@ -52,6 +55,14 @@
       "inherits": [
         "default"
       ]
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Xargas Build",
+      "description": "",
+      "displayName": "",
+      "configurePreset": "Xargas Configure"
     }
   ]
 }
