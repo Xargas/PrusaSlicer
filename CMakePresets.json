@@ -50,10 +50,23 @@
       "description": "Configure to build with dependencies builds also",
       "displayName": "",
       "cacheVariables": {
-        "PrusaSlicer_BUILD_DEPS": "y"
+        "PSAPI_LIB": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64/psapi.lib"
       },
       "inherits": [
-        "default"
+        "no-occt"
+      ]
+    }
+    ,
+    {
+      "name": "Xargas Configure Deps",
+      "description": "Configure to build with dependencies builds also",
+      "displayName": "",
+      "cacheVariables": {
+        "PrusaSlicer_BUILD_DEPS": "y",
+        "PSAPI_LIB": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.22621.0/um/x64/psapi.lib"
+      },
+      "inherits": [
+        "no-occt"
       ]
     }
   ],
@@ -63,6 +76,12 @@
       "description": "",
       "displayName": "",
       "configurePreset": "Xargas Configure"
+    },
+    {
+      "name": "Xargas Build Deps",
+      "description": "",
+      "displayName": "",
+      "configurePreset": "Xargas Configure Deps"
     }
   ]
 }

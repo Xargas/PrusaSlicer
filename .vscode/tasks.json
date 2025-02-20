@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    {
+      "label": "Launch PrusaSlicer Debug",
+      "command": "./build-no-occt/src/Debug/prusa-slicer.exe",
+      "args": [],
+      "type": "process"
+    }
+  ]
+}
